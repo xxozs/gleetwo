@@ -4,4 +4,136 @@
 @import 'global';
 
 
+.header{
+  padding: 50px 0; 
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__list-item + .menu__list-item{
+    padding-left: 20px;
+  }
+  &__list-link{
+    color: $menu;
+    font-size: 15px;
+    line-height: 12px;
+    padding-bottom: 3px;
+    transition: all .3s;
+    @extend %rubik-500;
+    font-weight: 550;
+    &:hover{
+      color: $accent;
+      border-bottom: 1px solid $accent;
+    }
+  }
+  &__list-link--active{
+    color: $accent;
+    border-bottom: 1px solid $accent;
+    padding-bottom: 3px;
+    @extend %rubik-500;
+    font-weight: 550;
+  }
+}
+
+.user-nav{
+  display: flex;
+  align-items: center;
+  &__link{
+    position: relative;
+  }
+  &__link + .user-nav__link{
+    padding-left: 20px;
+  }
+  &__num-like{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -17px;
+    right: -88px;
+    font-size: 10px;
+    color: $title;
+    text-align: center;
+    line-height: 16px;
+  }
+  &__num-search{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -17px;
+    right: -148px;
+    font-size: 10px;
+    color: $title;
+    text-align: center;
+    line-height: 16px;
+  }
+}
+
+.logo{
+  display: flex;
+}
+
+.logo__name{
+  
+  @extend %rubik-500;
+  color: $menu;
+  font-size: 36px;
+  line-height: 51px;
+  margin-left: 14px;
+}
+
+.icon-img{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.heart-img{
+  position: absolute;
+  top: -9px;
+  right: -77px;
+}
+
+.truck-img{
+  position: absolute;
+  top: -9px;
+  right: -139px;
+}
+
+.menu__circles{
+  position: absolute;
+  top: 16px;
+  right: 15px;
+}
+
+.menu-img{
+  padding-left: 20px;
+}
+
+.icon__bg-img{
+  width: 100%;
+  right: -20px;
+}
+
+.user-nav__sep{
+  position: absolute;
+  top: 59px;
+  right: 171px;
+}
+
+.user-nav__link span{
+  @extend %dmsans-400;
+  font-size: 10px;
+}
+
 @import 'media';

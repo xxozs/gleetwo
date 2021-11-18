@@ -1,12 +1,12 @@
- .DS_Store
- .idea/
- .idea/*
- .vscode
- *.sublome*
- npm-debug.*
+.DS_Store
+.idea/
+.idea/*
+.vscode
+*.sublome*
+npm-debug.*
 
- dist/
- node_modules/
- package-lock.json
- app/css/*
+dist/
+package-lock.json
+app/css/*
 node_modules
+node_modules/

@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -37,7 +38,7 @@
     color: $menu;
     font-size: 15px;
     line-height: 12px;
-    padding-bottom: 3px;
+    padding-bottom: 0 2px 3px;
     transition: all .3s;
     @extend %rubik-500;
     font-weight: 550;
@@ -67,12 +68,12 @@
   &__icon-img{
     position: absolute;
     top: 67px;
-    right: 302px;
+    right: 362px;
   }
   &__heart-img{
     position: absolute;
     top: 67px;
-    right: 205px;
+    right: 266px;
   }
   &__link span{
     position: absolute;
@@ -87,26 +88,26 @@
   }
   &__num-like{
     top: 60px;
-    right: 195px;
+    right: 255px;
   }
   &__truck-img{
     position: absolute;
     top: 67px;
-    right: 127px;
+    right: 187px;
   }
   &__num-search{
     top: 59px;
-    right: 119px;
+    right: 179px;
   }
   &__separation-img{
     position: absolute;
     top: 59px;
-    right: 173px;
+    right: 233px;
   }
   &__circles-img{
     position: absolute;
     top: 67px;
-    right: 30px;
+    right: 90px;
   }
 }
 .footer-top{
@@ -189,7 +190,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    margin-top: 74px;
+    margin: 74px 0 40px;
   &__social-list{
     display: flex;
     align-items: center;
@@ -213,6 +214,91 @@
     border: none;
     cursor: pointer;
     color: $default;
+    & span{
+      margin-left: 10px;
+    }
+  }
+}
+
+.top-slider{
+  margin: 0 60px;
+  background-image: url(../images/top-slider__bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__inner{
+    padding: 220px 0 43px;
+  }
+  &__item{
+    display: flex !important; 
+    margin-bottom: 200px;
+  }
+  &__title{
+    font-size: 72px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: $title;
+    max-width: 410px;
+    width: 100%;
+    margin: 0 120px 40px 0;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 365px;
+    width: 100%;
+    color: $menu;
+    margin-bottom: 40px;
+  }
+  &__link{
+    display: flex;
+    position: absolute;
+    font-size: 15px;
+    line-height: 12px;
+    background-color: #a3bbc8;
+    width: 200px;
+    color: #fff;
+    padding: 20px 25px;
+
+  }
+  &__link-arrow{
+    position: relative;
+    display: block;
+    top: 22px;
+    right: -153px;
+  }
+  &__img{
+    padding-top: 50px;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    li{
+      padding-left: 5px;
+      & + .slick-dots li{
+        margin-left: 12px;
+      }
+      button{
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        opacity: 0.3;
+        @extend %rubik-500;
+        font-size: 11px;
+        line-height: 9px;
+        color: $title; 
+        cursor: pointer;
+      }
+      &.slick-active{
+        button{
+        opacity: 1;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        }
+     }
+    }
   }
 }
 

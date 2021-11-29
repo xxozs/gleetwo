@@ -408,17 +408,17 @@
   &__filter-btn{
     margin-bottom: 77px;
   }
-  &__btn{
+  &-btn{
     border: none;
     background-color: transparent;
     @extend %dmsans-700;
     font-size: 16px;
     color: #8b8b8b;
   }
-  &__btn + .design__btn{
+  &-btn + .design-btn{
     margin-left: 28px;
   }
-  &__btn:hover{
+  &-btn:hover{
     color: #191919;
     transition: all .3s;
     cursor: pointer;
@@ -485,6 +485,111 @@
     justify-content: center;
     align-items: center;
   }
+}
+.product{
+  padding: 73px 0 44px;
+  &-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  &-top{
+    text-align: center;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: #191919;
+    margin-bottom: 37px;
+  }
+  &__filter-btn{
+    margin-bottom: 80px;
+  }
+  &-btn{
+    border: none;
+    background-color: transparent;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: $default;
+  } 
+  &-btn + .product-btn{
+    margin-left: 30px;
+  }
+  &-btn:hover{
+    color: #191919;
+    cursor: pointer;
+    transition: all .3s;
+  }
+}
+.product__items{
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  row-gap: 40px;
+  column-gap: 30px;
+}
+.product-item{
+  max-width: 270px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  height: 380px;
+  padding: 30px 40px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  &__img-box{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 70px;
+    & img{
+      margin: auto;
+      vertical-align: center;
+    }
+  }
+  &__link-box{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    left: 16px;
+    transform: translateY(300%);
+    transition: all .3s;
+  }
+  &__link + .product-item__link{
+    margin-left: 15px;
+  }
+  &__link{
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    
+    cursor: pointer;
+    transition: all .3s;
+  }
+  &__link:hover{
+    background-color: #a3bac7;
+    path{
+    fill: rgb(255, 255, 255);
+    }
+  }
+  &:hover{
+    .product-item__link-box{
+      transform: translateY(0);
+    }
+  }
+  &__title{
+    color: $title;
+    @extend %dmsans-500;
+    font-size: 16px;    
+    line-height: 40px;
+    vertical-align: baseline;
+  }
+  &__price{
+    color: #a3bbc8;
+    font-size: 16px;
+    line-height: 40px;
+  }
+}
+.mixitup-control-active{
+  color: #191919;
 }
 
 @import 'media';

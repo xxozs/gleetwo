@@ -258,21 +258,21 @@
     margin-bottom: 40px;
   }
   &__link{
-    display: flex;
-    position: absolute;
+    display: inline-block;
+    position: relative;
     font-size: 15px;
     line-height: 12px;
     background-color: #a3bbc8;
     width: 200px;
     color: #fff;
-    padding: 20px 25px;
+    padding: 24px 27px;
 
   }
   &__link-arrow{
-    position: relative;
+    position: absolute;
     display: block;
-    top: 22px;
-    right: -153px;
+    bottom: 25px;
+    left: 158px;
   }
   &__img{
     padding-top: 50px;
@@ -340,7 +340,6 @@
    overflow: hidden;
    color: #585858;
   }
-  
 }
 
 .support{
@@ -487,7 +486,7 @@
   }
 }
 .product{
-  padding: 73px 0 44px;
+  padding: 73px 0 85px;
   &-wrapper{
     display: flex;
     justify-content: center;
@@ -591,5 +590,89 @@
 .mixitup-control-active{
   color: #191919;
 }
+.present{
+  &-items{
+    display: flex;
+    padding-top: 96px;
+  }
+  &-item__short{
+    position: relative;
+    padding: 100px 150px 100px 385px;
+    display: block;
+    background-color: #feefe2;
+    margin-right: 30px;
+  }
+  &-item__short::before{
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 233px;
+    height: 405px;
+    background: url(../images/lamp-short.svg) no-repeat right center;
+    left: 40px;
+    bottom: 100px;
+  }
+  &-title__short{
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 32px;
+    color: $title;
+    margin-bottom: 28px;
+  }
+  &-text__short{
+    font-size: 16px;
+    line-height: 30px;
+    max-width: 335px;
+    color: $title;
+    margin-bottom: 30px;
+  }
+  &-link{
+    display: inline-block;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    color: #436372;
+    border: solid 1px #b3b7b5;
+    padding: 20px 19px 23px 18px;
+    border-radius: 5px;
+  }
+  &-arrow__img{
+    position: relative;
+    display: inline-block;
+    margin-left: 43px;
+  }
+  &-item__long{
+    position: relative;
+    padding: 100px 150px 100px 385px;
+    display: block;
+    background-color: #feefe2;
+  }
+  &-item__long::before{
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 233px;
+    height: 405px;
+    background: url(../images/lamp-long.svg) no-repeat;
+    left: 40px;
+    bottom: 100px;
+  }
+  &-title__long{
+    @extend %dmsans-700;
+    max-width: 249px;
+    font-size: 26px;
+    line-height: 32px;
+    color: $title;
+    margin-bottom: 20px;
+  }
+   &-text__long{
+    font-size: 16px;
+    line-height: 30px;
+    max-width: 295px;
+    color: $title;
+    margin-bottom: 36px;
+  }
+}
+
 
 @import 'media';

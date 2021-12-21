@@ -4,110 +4,94 @@
 @import 'libs';
 @import 'global';
 
-
+.logo{
+    display: flex;
+    align-items: center;
+    &__name{
+      @extend %rubik-500;
+      color: $menu;
+      font-size: 36px;
+      line-height: 58px;
+      margin-left: 10px;
+    }
+}
 .header{
-  padding: 50px 0; 
   &__inner{
     display: flex;
-    justify-content: space-between;
+    text-align: center;
     align-items: center;
+    padding: 45px 0 50px;
+  }
+  &__logo{
+    margin-right: 486px;
   }
 }
-
-.logo{
-  display: flex;
-  vertical-align: middle;
-}
-
-.logo__name{
-  @extend %rubik-500;
-  color: $menu;
-  font-size: 36px;
-  line-height: 51px;
-  margin-left: 14px;
-}
-
 .menu{
+  margin-right: 343px;
   &__list{
     display: flex;
-  }
-  &__list-item + .menu__list-item{
-    padding-left: 20px;
-  }
-  &__list-link{
-    color: $menu;
-    font-size: 15px;
-    line-height: 12px;
-    padding-bottom: 0 2px 3px;
-    transition: all .3s;
-    @extend %rubik-500;
-    font-weight: 550;
-    &:hover{
-      color: $accent;
-      border-bottom: 1px solid $accent;
+    &-link{
+      color: $menu;
+      font-size: 15px;
+      line-height: 12px;
+      @extend %rubik-500;
+      transition: all .3s;
+      &:hover{
+       color: $accent;
+      }
     }
   }
-  &__list-link--active{
-    color: $accent;
-    border-bottom: 1px solid $accent;
-    padding-bottom: 3px;
-    @extend %rubik-500;
-    font-weight: 550;
+  &__list-item + .menu__list-item{
+    padding-left: 33px;
   }
 }
 
 .user-nav{
   display: flex;
   justify-content: space-between;
-  &__bg-img{
-    margin-left: 20px;
+  align-items: center;
+  &__link{
+    display: flex;
+    position: relative;
   }
-  &__bg-search{
-    margin-left: 0;
-  }
-  &__icon-img{
+  &__num{
     position: absolute;
-    top: 67px;
-    right: 362px;
-  }
-  &__heart-img{
-    position: absolute;
-    top: 67px;
-    right: 266px;
-  }
-  &__link span{
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
+    display: flex;
+    top: -5px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
     background-color: #fff;
+    border-radius: 7.5px;
+    @extend %dmsans-400;
     font-size: 10px;
-    line-height: 16px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     color: $title;
   }
-  &__num-like{
-    top: 60px;
-    right: 255px;
+  &__search{
+    clip-path: circle(50% at center center);
+    background-color: #edf1f4;
+    padding: 15px;
   }
-  &__truck-img{
-    position: absolute;
-    top: 67px;
-    right: 187px;
+  &__wrapper{
+    display: flex;
+    background-color: #fcd7b6;
+    border-radius: 50px;
+    padding: 16px 38px 13px 38px;
+    margin: 0 20px;
   }
-  &__num-search{
-    top: 59px;
-    right: 179px;
+  &__like{
+    position: relative;
+    margin-right: 27px; 
+    border-right: solid 1px #fde7d3;
+    line-height: 32px;
+    padding-right: 28px;
   }
-  &__separation-img{
-    position: absolute;
-    top: 59px;
-    right: 233px;
-  }
-  &__circles-img{
-    position: absolute;
-    top: 67px;
-    right: 90px;
+  &__menu{
+    clip-path: circle(50% at center center);
+    padding: 15px;
+    background-color: #a3bbc8;
   }
 }
 
@@ -141,7 +125,7 @@
     line-height: 21px;
   }
   &__logo{
-    margin-bottom: 29px;
+    margin-bottom: 41px;
   }
   &__address,
   &__phone,
@@ -225,54 +209,42 @@
   }
 }
 
-.wrapper-slider{
-  background-image: url(../images/top-slider__bg.png);
-}
-
 .top-slider{
-  margin: 0 60px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  &__inner{
-    padding: 220px 0 43px;
-  }
+  background-image: url(../images/slider/top-slider__bg.png);
+  padding: 215px 0 45px;
+  margin: 0 75px;
   &__item{
-    display: flex !important; 
-    margin-bottom: 200px;
+    display: flex !important;
+    justify-content: space-between;
+    margin-bottom: 204px;
   }
   &__title{
+    @extend %rubik-500;
+    text-transform: uppercase;
     font-size: 72px;
     line-height: 70px;
-    text-transform: uppercase;
     color: $title;
-    max-width: 410px;
-    width: 100%;
-    margin: 0 120px 40px 0;
+    max-width: 415px;
+    margin-bottom: 25px;
   }
   &__text{
     font-size: 18px;
     line-height: 30px;
-    max-width: 365px;
-    width: 100%;
-    color: $menu;
-    margin-bottom: 40px;
+    max-width: 370px;
+    color: #436372;
+    margin-bottom: 35px;
   }
   &__link{
-    display: inline-block;
-    position: relative;
-    font-size: 15px;
-    line-height: 12px;
+    display: inline-flex;
     background-color: #a3bbc8;
-    width: 200px;
     color: #fff;
-    padding: 24px 27px;
-
-  }
-  &__link-arrow{
-    position: absolute;
-    display: block;
-    bottom: 25px;
-    left: 158px;
+    padding: 23px 15px 22px 29px;
+    &-title{
+      @extend %rubik-500;
+      font-size: 15px;
+      line-height: 12px;
+      margin-right: 60px;
+    }
   }
   &__img{
     padding-top: 50px;
@@ -281,34 +253,32 @@
     display: flex;
     justify-content: center;
     li{
-      padding-left: 5px;
-      & + .slick-dots li{
-        margin-left: 12px;
-      }
+      padding: 0 10px;
       button{
+        padding: 0;
+        font-size: 11;
+        line-height: 9px;
+        color: $title;
+        @extend %rubik-500;
+        background-color: white;
+        opacity: 0.3;
+        width: 29px;
+        height: 29px;
         border: none;
         border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        opacity: 0.3;
-        @extend %rubik-500;
-        font-size: 11px;
-        line-height: 9px;
-        color: $title; 
-        cursor: pointer;
       }
       &.slick-active{
         button{
-        opacity: 1;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
         background-color: #fff;
+        border-radius: 50%;
+        opacity: 1;
         }
-     }
+      }
     }
   }
 }
+
+
 
 .wrapper-rules{
   background-color: #fef7f0;
@@ -673,6 +643,227 @@
     margin-bottom: 36px;
   }
 }
+.insight{
+  display: flex;
+  justify-content: center;
+  height: 780px;
+  background: linear-gradient(to bottom, white 50%, #fef7f0 50%);
+}
+.insight-top{
+  @extend %dmsans-700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 43px;
+  &__title{
+  font-size: 36px;
+  color: #191919;
+  }
+  &__link{
+  position: relative;
+  font-size: 16px;
+  color: #262626;
+  margin-right: 13px;
+  display: block;
+  }
+  &__link::after{
+    margin-left: 13px;
+    top: 6px;
+    position: absolute;
+    content: "";
+    background: url(../images/icons/insight-arrow.svg) no-repeat;
+    height: 11px;
+    width: 6px;
+  }
+}
+.insight-content{
+  display: flex;
+  justify-content: space-between;
+  &__item{
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    background-color: #fef7f0;
+  }
+  &__item + .insight-content__item{
+    margin-left: 30px;
+  }
+  &__link{
+    display: block;
+    position: relative;
+    height: 250px;
+    width: 369px;
+  }
+  &__title{
+    position: absolute;
+    display: inline-block;
+    @extend %dmsans-400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    background-color: #a3bbc8;
+    padding: 7px 30px;
+    border-radius: 18px;
+    bottom: -16px;
+    left: 30px;
+  }
+  &__text{
+    @extend %dmsans-500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #262626;
+    max-width: 293px;
+    padding: 35px 0 17px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  &__down{
+    display: flex;
+    font-size: 12px;
+    line-height: 30px;
+    color: #222933;
+    margin-top: 13px;
+  }
+  &__wrapper{
+    background-color: #fff;
+    padding-left: 30px;
+    padding-bottom: 27px;
+  }
+  &__subtitle-date{
+    color: #222933;
+    padding-left: 30px;
+    position: relative;
+    margin-right: 27px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/icons/date.svg');
+      left: 0;
+      top: 4px;
+    }
+  }
+  &__subtitle-author{
+  color: #222933;
+  padding-left: 30px;
+  position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/icons/man.svg');
+      left: 0;
+      top: 4px;
+    }
+  }
+  &__text-last{
+    padding-bottom: 39px;
+  }
+}
+.wrapper-partners{
+  background-color: #fef7f0;
+}
+.partners{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:90px 50px 94px;
+}
+.top-log{
+  text-align: center;
+  background-color: #edf1f4;
+  padding: 35px 0;
+  &__title{ 
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 24px;
+    color: #222933;
+    margin-bottom: 14px;
+  }
+}
 
+.modal{
+  padding-top: 120px;
+  max-width: 480px;
+  margin: 0 auto 120px;
+  color: #436372;
+  font-size: 14px;
+  &__label{
+    display: block;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border: 1px solid #f6f6f6;
+    margin-top: 12px;
+    height: 55px;
+    padding: 0 15px;
+  }
+  &__link{
+    font-size: 18px;
+    @extend %rubik-500;
+    border: none;
+    background-color: #a3bbc8;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+  &-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #436372;
+    font-size: 14px;
+    border-bottom: solid 1px #f6f6f6;
+    padding-bottom: 30px;
+  }
+  &__lost{
+    color: #436372;
+  }
+  &__text{
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__link-create{
+    border: solid 1px #a3bbc8;
+    padding: 20px 144px;
+    font-size: 18px;
+    @extend %rubik-500;
+    color: $title;
+  }
+}
+.terms{
+  padding: 120px 0 55px 20px;
+  max-width: 1201px;
+  margin: 0 auto;
+  color: $title;
+  line-height: 30px;
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  & ol{
+    padding: 0;
+    padding-left: 20px;
+//     list-style-type: none; /* Убираем исходные маркеры */
+//     counter-reset:  item; /* Обнуляем счетчик списка */
+//     & li:nth-child(-n+9)::before {
+//     content: '0' counter(item);
+//     counter-increment: item; /* Задаём имя счетчика */
+// }
+    & li{
+      margin-bottom: 30px;
+      padding: 0;
+    }
+  }
+  &__text{
+    margin-bottom: 65px;
+  }
+}
 
 @import 'media';

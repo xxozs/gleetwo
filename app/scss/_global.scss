@@ -18,12 +18,41 @@ body{
 
 .container-big{
   max-width: 1800px;
-  margin: 0 60px;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .container-small{
   max-width: 1200px;
   margin: 0 60px;
   padding: 0 15px;
+  margin: 0 auto;
+}
+
+.breadcrumbs{
+  display: flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    color: $default;
+    padding-right: 5px;
+    padding-left: 6px;
+    position: relative;
+    &::after{
+      content: '/';
+      position: absolute;
+    }
+    &:last-child{
+      color: $accent;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+    padding-right: 5px;
+  }
 }

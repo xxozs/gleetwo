@@ -3,6 +3,10 @@ $default: #7b7b7b;
 $menu: #436372;
 $title: #243f4d;
 
+%rubik-300{
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
 
 %dmsans-400{
   font-family: 'DMSans-Regular', sans-serif;
@@ -14,9 +18,14 @@ $title: #243f4d;
   font-weight: 400;
 }
 
+%FontAwesome5Pro-400{
+  font-family: 'FontAwesome5Pro-Regular', sans-serif;
+  font-weight: 400;
+}
+
 %rubik-500{
   font-family: 'Rubik-Medium', sans-serif;
-  font-weight: 550;
+  font-weight: 500;
 }
 
 %dmsans-500{
@@ -24,12 +33,11 @@ $title: #243f4d;
   font-weight: 500;
 }
 
+
 %dmsans-700{
  font-family: 'DMSans-Bold', sans-serif;
  font-weight: 700;
 }
-
-
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});

@@ -13,14 +13,14 @@
   <header class="header">
     <div class="container-big">
       <div class="header__inner">
-        <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.png" alt="Logo">
-          <p class="logo__name">Glee.</p>
+        <a class="logo header__logo" href="#">
+          <img class="header__logo-img" src="images/logo.png" alt="logo">
+          <h3 class="logo__name header__logo-name">Glee.</h3>
         </a>
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a class="menu__list-link--active" href="#">Home+</a>
+              <a class="menu__list-link" href="#">Home +</a>
             </li>
             <li class="menu__list-item">
               <a class="menu__list-link" href="#">About</a>
@@ -29,7 +29,7 @@
               <a class="menu__list-link" href="#">Services</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#">Pages+</a>
+              <a class="menu__list-link" href="#">Pages +</a>
             </li>
             <li class="menu__list-item">
               <a class="menu__list-link" href="#">News</a>
@@ -41,23 +41,20 @@
         </nav>
         <div class="user-nav">
           <a class="user-nav__link" href="#">
-            <img class="user-nav__bg-img
-            user-nav__bg-search" src="images/icons/lupabg.svg" alt="user btn">
-            <img class="user-nav__icon-img" src="images/icons/lupa.svg" alt="search btn">
+            <img class="user-nav__search" src="images/icons/lupa.svg" alt="search">
           </a>
+          <div class="user-nav__wrapper">
+            <a class="user-nav__link" href="#">
+              <img class="user-nav__like" src="images/icons/heart.svg" alt="like">
+              <span class="user-nav__num">0</span>
+            </a>
+            <a class="user-nav__link" href="#">
+              <img class="user-nav__basket" src="images/icons/truck.svg" alt="basket">
+              <span class="user-nav__num">0</span>
+            </a>
+          </div>
           <a class="user-nav__link" href="#">
-            <img class="user-nav__heart-img" src="images/icons/heart.svg" alt="like btn">
-            <span class="user-nav__num-like">0</span>
-          </a>
-          <a class="user-nav__link" href="#">
-            <img class="user-nav__truck-img" src="images/icons/truck.svg" alt="truck btn">
-            <span class="user-nav__num-search">0</span>
-          </a>
-          <img class="user-nav__bg-img" src="images/icons/hertruckbg.svg" alt="">
-          <img class="user-nav__separation-img" src="images/icons/stick.svg" alt="">
-          <a class="user-nav__link" href="#">
-            <img class="user-nav__bg-img menu-img" src="images/icons/menu.svg" alt="menu btn">
-            <img class="user-nav__circles-img" src="images/icons/circles.svg" alt="">
+            <img class="user-nav__menu" src="images/icons/circles.svg" alt="menu">
           </a>
         </div>
       </div>
@@ -66,6 +63,60 @@
 
   <main class="main">
     <section class="top-slider">
+      <div class="container-small">
+        <div class="top-slider__inner">
+          <div class="top-slider__item">
+            <div class="top-slider__content">
+              <h3 class="top-slider__title">SMART AND
+                TRENDY</h3>
+              <p class="top-slider__text">
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+              <a class="top-slider__link" href="#">
+                <h4 class="top-slider__link-title">Shop Now</h4>
+                <img src="images/slider/arrow.svg" alt="" class="top-slider__link-img">
+              </a>
+            </div>
+            <img class="top-slider__img" src="images/slider/1.png" alt="slide image">
+          </div>
+          <div class="top-slider__item">
+            <div class="top-slider__content">
+              <h3 class="top-slider__title">SMART AND
+                TRENDY</h3>
+              <p class="top-slider__text">
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+              <a class="top-slider__link" href="#">
+                <h4 class="top-slider__link-title">Shop Now</h4>
+                <img src="images/slider/arrow.svg" alt="" class="top-slider__link-img">
+              </a>
+            </div>
+            <img class="top-slider__img" src="images/slider/1.png" alt="slide image">
+          </div>
+          <div class="top-slider__item">
+            <div class="top-slider__content">
+              <h3 class="top-slider__title">SMART AND
+                TRENDY</h3>
+              <p class="top-slider__text">
+                Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+              </p>
+              <a class="top-slider__link" href="#">
+                <h4 class="top-slider__link-title">Shop Now</h4>
+                <img src="images/slider/arrow.svg" alt="" class="top-slider__link-img">
+              </a>
+            </div>
+            <img class="top-slider__img" src="images/slider/1.png" alt="slide image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- <section class="top-slider">
       <div class="wrapper-slider">
         <div class="container-small">
           <div class="top-slider__inner">
@@ -150,7 +201,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="product">
       <div class="product-wrapper" data-ref="container-1">
@@ -485,6 +536,83 @@
       </div>
     </section>
 
+    <section class="insight">
+      <div class="container-small">
+        <div class="insight-top">
+          <h3 class="insight-top__title">Our Insights & Articles</h3>
+          <a class="insight-top__link" href="#">View All</a>
+        </div>
+        <div class="insight-content">
+          <div class="insight-content__item">
+            <a class="insight-content__link" href="#">
+              <img class="insight-content__img" src="images/insights/insight1.jpg" alt="insight image">
+              <h3 class="insight-content__title">NEWS</h5>
+            </a>
+            <div class="insight-content__wrapper">
+              <a class="insight-content__link-text" href="#">
+                <p class="insight-content__text">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                  ad minim veniam</p>
+              </a>
+              <div class="insight-content__down">
+                <a class="insight-content__link-date" href="#">
+                  <h5 class="insight-content__subtitle-date">28 JANUARY, 2021</h5>
+                </a>
+                <a class="insight-content__link-author" href="#">
+                  <h5 class="insight-content__subtitle-author">BY ADMIN</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="insight-content__item">
+            <a class="insight-content__link" href="#">
+              <img class="insight-content__img" src="images/insights/insight2.jpg" alt="insight image">
+              <h3 class="insight-content__title">NEWS</h5>
+            </a>
+            <div class="insight-content__wrapper">
+              <a class="insight-content__link-text" href="#">
+                <p class="insight-content__text">Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore</p>
+              </a>
+              <div class="insight-content__down">
+                <a class="insight-content__link-date" href="#">
+                  <h5 class="insight-content__subtitle-date">28 JANUARY, 2021</h5>
+                </a>
+                <a class="insight-content__link-author" href="#">
+                  <h5 class="insight-content__subtitle-author">BY ADMIN</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="insight-content__item">
+            <a class="insight-content__link" href="#">
+              <img class="insight-content__img" src="images/insights/insight3.jpg" alt="insight image">
+              <h3 class="insight-content__title">NEWS</h5>
+            </a>
+            <div class="insight-content__wrapper">
+            <a class="insight-content__link-text" href="#">
+              <p class="insight-content__text insight-content__text-last">Rncididunt ut labore et dolore magna
+                aliqua. Ut enim</p>
+            </a>
+            <div class="insight-content__down">
+              <a class="insight-content__link-date" href="#">
+                <h5 class="insight-content__subtitle-date">28 JANUARY, 2021</h5>
+              </a>
+              <a class="insight-content__link-author" href="#">
+                <h5 class="insight-content__subtitle-author">BY ADMIN</h5>
+              </a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="partners">
+          <img class="partners-img" src="images/partners/partner1.svg" alt="">
+          <img class="partners-img" src="images/partners/partner2.svg" alt="">
+          <img class="partners-img" src="images/partners/partner3.svg" alt="">
+          <img class="partners-img" src="images/partners/partner4.svg" alt="">
+          <img class="partners-img" src="images/partners/partner5.svg" alt="">
+        </div>
+      </div>
+    </section>
   </main>
 
   <div class="wrapper-footer">
@@ -543,9 +671,7 @@
                 <a class="footer-top__link" href="#">Register</a>
               </li>
             </ul>
-
           </div>
-
           <div class="footer-top__item footer-top__news">
             <h6 class="footer-top__title">NEWSLETTER</h6>
             <p class="footer-top__text">Subscribe by our newsletter and get

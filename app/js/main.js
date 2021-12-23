@@ -1,4 +1,27 @@
 $(function(){
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  });
+
+  $(".star").rateYo({
+    starWidth: "12px",
+    starHeigth: "12px",
+    ratedFill: "#ffcc00",
+    normalFill: "#d6d6d6",
+    halfStar: true,
+    spacing: "6px",
+    readOnly: true
+  });
   
   // var mixer = mixitup('.design__content');
   var containerEl1 = document.querySelector('[data-ref="container-1"]');

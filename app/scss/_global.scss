@@ -4,7 +4,7 @@ body{
 }
 
 body{
-   color: $default;
+   color: $title;
    font-size: 16px;
    line-height: 21px;
    @extend %rubik-400;
@@ -54,5 +54,31 @@ body{
   &__link{
     color: inherit;
     padding-right: 5px;
+  }
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__list{
+    display: inherit;
+  }
+  &__item{
+    padding-left: 15px;
+  }
+  &__link{
+    color: $title;
+    border: solid 1px #a3bbc8;
+    padding: 13px 19px;
+    &--active{
+      background-color: #a3bbc8;
+      color: #fff;
+    }
+  }
+  &__next{
+    color: $title;
+    border: solid 1px #a3bbc8;
+    padding: 13px 19px;
+    margin-left: 13px;
   }
 }

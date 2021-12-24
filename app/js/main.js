@@ -1,5 +1,23 @@
 $(function(){
 
+$('.details-item__num').styler();
+
+$('.details-slide__mini').slick({
+  asNavFor: '.details-slide__big',
+  focusOnSelect: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  vertical: true,
+  draggable: false
+});
+$('.details-slide__big').slick({
+  asNavFor: '.details-slide__mini',
+  draggable: false,
+  arrows: false,
+  fade: true
+});
+
+
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     prefix: "$",
@@ -12,6 +30,7 @@ $(function(){
       $('.filter-price__to').text(data.to);
     },
   });
+
 
   $(".star").rateYo({
     starWidth: "12px",

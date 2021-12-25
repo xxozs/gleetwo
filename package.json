@@ -25,6 +25,7 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
-    "ion-rangeslider": "^2.3.1"
+    "ion-rangeslider": "^2.3.1",
+    "swiper": "^7.4.1"
   }
 }

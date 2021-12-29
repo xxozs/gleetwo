@@ -1,0 +1,90 @@
+.logo{
+    display: flex;
+    align-items: center;
+    &__name{
+      @extend %rubik-500;
+      color: $menu;
+      font-size: 36px;
+      line-height: 58px;
+      margin-left: 10px;
+    }
+}
+.header{
+  &__inner{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 45px 0 50px;
+  }
+  &__logo{
+    margin-right: 486px;
+  }
+}
+.menu{
+  margin-right: 343px;
+  &__list{
+    display: flex;
+    &-link{
+      color: $menu;
+      font-size: 15px;
+      line-height: 12px;
+      @extend %rubik-500;
+      transition: all .3s;
+      &:hover{
+       color: $accent;
+      }
+    }
+  }
+  &__list-item + .menu__list-item{
+    padding-left: 33px;
+  }
+}
+
+.user-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__link{
+    display: flex;
+    position: relative;
+  }
+  &__num{
+    position: absolute;
+    display: flex;
+    top: -5px;
+    left: 13px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 7.5px;
+    @extend %dmsans-400;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    color: $title;
+  }
+  &__search{
+    clip-path: circle(50% at center center);
+    background-color: #edf1f4;
+    padding: 15px;
+  }
+  &__wrapper{
+    display: flex;
+    background-color: #fcd7b6;
+    border-radius: 50px;
+    padding: 16px 38px 13px 38px;
+    margin: 0 20px;
+  }
+  &__like{
+    position: relative;
+    margin-right: 27px; 
+    border-right: solid 1px #fde7d3;
+    line-height: 32px;
+    padding-right: 28px;
+  }
+  &__menu{
+    clip-path: circle(50% at center center);
+    padding: 15px;
+    background-color: #a3bbc8;
+  }
+}

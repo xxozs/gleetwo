@@ -1,0 +1,15 @@
+.video-furniture{
+  margin-bottom: 115px;
+  background-image: url(../images/furniture-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__room{
+    height: 500px;
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

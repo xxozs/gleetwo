@@ -1,0 +1,79 @@
+.design{
+  padding: 100px 0 115px;
+  display: flex;
+  justify-content: center;
+  &-top{
+    text-align: center;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: #191919;
+    margin-bottom: 34px;
+  }
+  &__filter-btn{
+    margin-bottom: 77px;
+  }
+  &-btn{
+    border: none;
+    background-color: transparent;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+  }
+  &-btn + .design-btn{
+    margin-left: 28px;
+  }
+  &-btn:hover{
+    color: #191919;
+    transition: all .3s;
+    cursor: pointer;
+  }
+  &__content{
+    display: grid;
+    grid-template-columns: 370px 370px 370px;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+  }
+  &__content-title{
+    @extend %dmsans-700;
+    font-size: 20px;
+    color: #191919;
+    max-width: 180px; 
+    margin-bottom: 17px;
+  }
+  &__content-text{
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #a3bbc8;
+  }
+  &__item{
+    position: relative;
+    display: inline-block;
+  }
+  &__item img{
+    width: 370px;
+    height: 246px;
+  }
+  &__item-text{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  &__item-link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #8b8b8b;
+    opacity: 0;
+  }
+  &__item:hover .design__item-link{
+    opacity: 0.3;
+    transition: all .3s;
+  }
+}
+.mixitup-control-active{
+  color: #191919;
+}

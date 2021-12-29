@@ -15,6 +15,7 @@
     text-align: center;
     align-items: center;
     padding: 45px 0 50px;
+    flex-wrap: wrap;
   }
   &__logo{
     margin-right: 486px;
@@ -22,6 +23,9 @@
 }
 .menu{
   margin-right: 343px;
+  &__btn{
+  display: none;
+  }
   &__list{
     display: flex;
     &-link{
@@ -42,7 +46,6 @@
 
 .user-nav{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   &__link{
     display: flex;
@@ -86,5 +89,115 @@
     clip-path: circle(50% at center center);
     padding: 15px;
     background-color: #a3bbc8;
+  }
+}
+
+@media (max-width: 1800px){
+  .menu{
+    margin-right: 0;
+    display: block;
+  }
+  .header{
+    &__logo{
+      margin-right: 0;
+    }
+    &__inner{
+      justify-content: space-between;
+    }
+  }
+}
+@media (max-width: 1000px){
+  .menu{
+    &__btn{
+      display: none;
+    }
+    margin-left: 20px;
+    order: 1;
+    &__list{
+      transform: translateY(-200%);
+      position: absolute;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      z-index: 5;
+      &.menu__list--active{
+        transform: translateY(0%);
+        transition: all .5s;
+      }
+    }
+    &__list-item + .menu__list-item{
+      padding-left: 0;
+    }
+    &__list{
+    display: flex;
+    text-align: center;
+    width: 100%;
+      &-link{
+        display: block;
+        font-size: 20px;
+        padding: 15px 0;
+      }
+    }
+    &__btn{
+      width: 30px;
+      height: 22px;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 0;
+      span{
+        width: 100%;
+        height: 3px;
+        background-color: $title;
+      }
+      &::before,
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: $title;
+      }
+      &::before{
+        top: 0;
+      }
+      &::after{
+        bottom: 0;
+        height: 4px;
+      }
+    }
+  }
+  .user-nav{
+    margin-left: auto;
+  }
+}
+@media (max-width: 555px){
+  .menu{
+    order: 0;
+    &__list{
+      top: 170px;
+    }
+  }
+  .header{
+    &__inner{
+      .user-nav{
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+@media (max-width: 330px){
+  .user-nav{
+    justify-content: center;
+    &__wrapper{
+      margin: 0 10px;
+    }
   }
 }

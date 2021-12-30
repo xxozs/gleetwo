@@ -2,16 +2,17 @@
   &-items{
     display: flex;
     padding-top: 96px;
-  }
+  } 
   &-item__short{
     position: relative;
     padding: 100px 150px 100px 385px;
-    display: block;
+    // display: block;
     background-color: #feefe2;
     margin-right: 30px;
   }
   &-item__short::before{
     display: inline-block;
+    object-fit: cover;
     position: absolute;
     content: "";
     width: 233px;
@@ -47,7 +48,7 @@
   &-arrow__img{
     position: relative;
     display: inline-block;
-    margin-left: 43px;
+    margin-left: 43px; 
   }
   &-item__long{
     position: relative;
@@ -59,6 +60,7 @@
     display: inline-block;
     position: absolute;
     content: "";
+    object-fit: cover;
     width: 233px;
     height: 405px;
     background: url(../images/lamp-long.svg) no-repeat;
@@ -79,5 +81,46 @@
     max-width: 295px;
     color: $title;
     margin-bottom: 36px;
+  }
+}
+@media (max-width: 1800px){
+  .present-arrow__img {
+    margin-left: 26px;
+  }
+  .present-item__long {
+    padding: 100px 75px 100px 333px;
+  }
+}
+@media (max-width: 1500px){
+.present-items{
+  justify-content: center;
+}
+.present-item__short{
+    padding: 100px 30px 100px 285px;
+}
+.present-item__long {
+    padding: 100px 40px 100px 285px;
+  }
+}
+@media (max-width: 1200px){
+  .present-items {
+    flex-direction: column;
+  }
+  .present-item__short {
+    margin: 0 0 85px 0;
+  }
+}
+@media (max-width: 555px){
+  .present-item__short::before{
+    display: none;
+  }
+  .present-item__long::before {
+    display: none;
+  }
+  .present-item__short{
+    padding: 100px 30px 100px 40px;
+  }
+  .present-item__long {
+    padding: 100px 40px 100px 40px;
   }
 }

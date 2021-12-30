@@ -93,7 +93,7 @@
 }
 
 @media (max-width: 1800px){
-  .menu{
+  .menu{ 
     margin-right: 0;
     display: block;
   }
@@ -103,6 +103,14 @@
     }
     &__inner{
       justify-content: space-between;
+      margin: 0 60px;
+    }
+  }
+}
+@media (max-width: 1220px){
+  .header{
+    &__inner{
+      margin: 0 30px;
     }
   }
 }
@@ -185,19 +193,15 @@
   }
   .header{
     &__inner{
+      margin: 0;
       .user-nav{
-        margin-top: 10px;
+        margin: 10px 0;
         width: 100%;
         justify-content: flex-end;
+        &__wrapper{
+          margin: 0 10px;
+        }
       }
-    }
-  }
-}
-@media (max-width: 330px){
-  .user-nav{
-    justify-content: center;
-    &__wrapper{
-      margin: 0 10px;
     }
   }
 }

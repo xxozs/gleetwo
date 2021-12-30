@@ -4,6 +4,14 @@ $(function(){
     $('.menu__list').toggleClass('menu__list--active');
   });
 
+  $('.top-slider__inner').slick({
+    dots: true,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 3000
+  });
+
 
   $('.details-tabs__top-item').on('click', function(e){
     e.preventDefault();
@@ -72,12 +80,6 @@ $('.details-slide__big').slick({
   var mixer1 = mixitup(containerEl1, config);
   var mixer2 = mixitup(containerEl2, config);
 
-  $('.top-slider__inner').slick({
-    dots: true,
-    arrows: false,
-    fade: true,
-    autoplay: true,
-    autoplaySpeed: 3000
-  });
+  
 
 });

@@ -123,3 +123,47 @@
   align-items: center;
   padding:90px 50px 94px;
 }
+@media (max-width: 1220px){
+  .insight{
+    height: 100%;
+  }
+  .insight-content{
+    flex-wrap: wrap;
+    justify-content: center;
+    &__item{
+      margin-bottom: 40px;
+    }
+    &__item:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+@media (max-width: 1000px){
+  .partners {
+    flex-direction: column;
+    img{
+      margin-bottom: 30px;
+    }
+  }
+
+}
+@media (max-width: 555px){
+  .insight-top{
+    justify-content: flex-start;
+    &__title{
+      margin-right: 10px;
+    }
+  }
+  .insight-top__title{
+    font-size: 25px;
+    line-height: 40px;
+    width: 70%;
+  }
+  .insight-content__item + .insight-content__item{
+    margin-left: 0;
+  }
+  .insight-content__link {
+    height: auto;    
+    width: 100%;
+  }
+}

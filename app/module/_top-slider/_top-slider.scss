@@ -1,9 +1,9 @@
 .top-slider{
-  background-image: url(../images/slider/top-slider__bg.png);
+  background-color: #fcd7b6;
   padding: 215px 0 45px;
   margin: 0 75px;
   &__item{
-    display: flex !important;
+    display: flex !important; 
     justify-content: space-between;
     margin-bottom: 204px;
   }
@@ -14,7 +14,7 @@
     line-height: 70px;
     color: $title;
     max-width: 415px;
-    margin-bottom: 25px;
+    margin-bottom: 25px; 
   }
   &__text{
     font-size: 18px;
@@ -37,6 +37,19 @@
   }
   &__img{
     padding-top: 50px;
+    object-fit: contain;
+    // &-back{
+    //   position: relative;
+    //   &::after{
+    //     content: "";
+    //     position: absolute;
+    //     // background-image: url(../images/slider/ellips.jpg);
+    //     right: 0;
+    //     top: 0;
+    //     width: 609px;
+    //     height: 630px;
+    //   }
+    // }
   }
   .slick-dots{
     display: flex;
@@ -55,14 +68,55 @@
         height: 29px;
         border: none;
         border-radius: 50%;
-      }
+      }  
       &.slick-active{
         button{
         background-color: #fff;
         border-radius: 50%;
-        opacity: 1;
+        opacity: 1; 
         }
       }
+    }
+  }
+}
+@media (max-width: 1220px){
+  .top-slider{
+    margin: 0 45px;
+  }
+}
+@media (max-width: 1050px){
+  .top-slider__img-back{
+    & img{
+    display: none;
+    }
+  }
+  .top-slider{
+    padding: 150px 45px 100px;
+    &__title{
+      max-width: 100%;
+    }
+    &__item{
+      margin-bottom: 100px;
+    }
+  }
+}
+@media (max-width: 555px){
+  .top-slider{
+    padding: 100px 15px;
+    &__title{
+    font-size: 50px;
+    }
+  }
+}
+@media (max-width: 370px){
+  top-slider{
+    padding: 50px 15px;
+    &__title{
+      line-height: 30px;
+      font-size: 42px;
+    }
+    &__link-title{
+      margin-right: 30px;
     }
   }
 }

@@ -10,6 +10,7 @@
   &__title{
     @extend %dmsans-700;
     font-size: 36px;
+    line-height: 50px;
     color: #191919;
     margin-bottom: 37px;
   }
@@ -102,4 +103,22 @@
 }
 .mixitup-control-active{
   color: #191919;
+} 
+@media (max-width: 1220px){
+  .product__items {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1000px){
+  .product__items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px){
+  .product__items {
+    grid-template-columns: 1fr;
+  }
+  .product-btn {
+    margin-bottom: 15px;
+  }
 }

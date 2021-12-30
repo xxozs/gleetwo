@@ -54,6 +54,7 @@
   &__item img{
     width: 370px;
     height: 246px;
+    object-fit: cover;
   }
   &__item-text{
     position: absolute;
@@ -76,4 +77,22 @@
 }
 .mixitup-control-active{
   color: #191919;
+}
+@media (max-width: 1220px){
+  .design__content{
+  grid-template-columns: 370px 370px;
+  } 
+}
+@media (max-width: 815px){
+  .design__content{
+  grid-template-columns: 1fr;
+  } 
+}
+@media (max-width: 555px){
+  .design__item-text{
+    top: 5px;
+  }
+  .design-btn{
+    margin-bottom: 10px;
+  }
 }

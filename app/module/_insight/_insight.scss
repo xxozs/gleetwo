@@ -122,6 +122,9 @@
   justify-content: space-between;
   align-items: center;
   padding:90px 50px 94px;
+  & img{
+    display: inline;
+  }
 }
 @media (max-width: 1220px){
   .insight{
@@ -145,7 +148,6 @@
       margin-bottom: 30px;
     }
   }
-
 }
 @media (max-width: 555px){
   .insight-top{

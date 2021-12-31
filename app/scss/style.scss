@@ -216,9 +216,11 @@
       margin-left: 10px;
     }
   }
+  &__filters{
+    width: 280px;
+  }
 }
 .filter__category{
-  width: 280px;
   margin-bottom: 55px;
   &-label{
     display: block;
@@ -252,7 +254,6 @@
     }
   }
 .filter-price{
-  width: 280px;
   margin-bottom: 75px;
   &__input{
     max-width: 280px;
@@ -353,18 +354,22 @@
   }
   &__item{
     display: flex;
-    padding-left: 25px;
+    align-items: center;
+    padding-left: 70px;
     margin-bottom: 40px;
   }
   &__img-link{
-    min-width: 370px;
-    height: 500px;
+    max-width: 370px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
   }
   &__wrapper-box{
     padding: 85px 0 70px 55px;
   }
   &__title{
     font-size: 40px;
+    line-height: 40px;
     color: #333;
     @extend %rubik-400;
     margin-bottom: 28px;
@@ -685,11 +690,16 @@
     margin-bottom: 30px;
   }
   &__text{
-    width: 570px;
+    max-width: 570px;
+    width: 100%;
     display: inline-block;
     height: 50px;
     padding: 0 20px;
     border: 1px solid #f0f0f0;
+    margin-right: 30px;
+    &:last-child{
+      margin-right: 0;
+    }
   }
   &__textarea{
     border: 1px solid #f0f0f0;
@@ -789,6 +799,7 @@
   }
   &__item-title{
     font-size: 36px;
+    line-height: 32px;
     color: #333;
     @extend %rubik-400;
     margin-bottom: 40px;
@@ -888,7 +899,7 @@ button{
     h2{
       @extend %rubik-400;
       font-size: 36px;
-      line-height: 26px;
+      line-height: 36px;
     }
     h4{
       @extend %rubik-500;
@@ -912,7 +923,7 @@ button{
         content: "";
         position: absolute;
         border: 5px solid #a3bbc8;
-        height: 130px;
+        height: 100%;
         left: 0;
         top: 0;
       }
@@ -946,6 +957,8 @@ button{
         img{
           margin-right: 30px;
           float: left;
+          width: 76px;
+          height: 76px;
         }
       }
       &-name{
@@ -1081,7 +1094,7 @@ button{
         }
       }
     }
-    &-address{
+    &-address{ 
       max-width: 170px;
     }
   }
@@ -1089,13 +1102,19 @@ button{
     display: flex;
     &-form{
       margin-right: 45px;
+      & img{
+        max-width: 500px;
+        width: 100%;
+        max-height: 345px;
+      }
       &__text-box{
         margin-bottom: 25px;
       }
       &__mail,
       &__name{
         display: inline-block;
-        width: 300px;
+        max-width: 300px;
+        width: 100%;
         height: 50px;
         padding: 20px;
         background-color: #fafafa;
@@ -1109,7 +1128,8 @@ button{
       &__textarea{
         display: block;
         text-transform: uppercase;
-        width: 620px;
+        max-width: 620px;
+        width: 100%;
         height: 180px;
         padding: 20px;
         background-color: #fafafa;
@@ -1128,7 +1148,6 @@ button{
       }
     }
   }
-
 
 
 @import 'media';

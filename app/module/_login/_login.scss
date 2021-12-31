@@ -46,8 +46,11 @@
     margin-bottom: 40px;
   }
   &__link-create{
+    display: inline-block;
     border: solid 1px #a3bbc8;
-    padding: 20px 144px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
     font-size: 18px;
     @extend %rubik-500;
     color: $title;
@@ -61,4 +64,12 @@
   justify-content: space-between;
   align-items: center;
   padding:90px 50px 94px;
+}
+@media (max-width: 1000px){
+  .partners {
+    flex-direction: column;
+    img{
+      margin-bottom: 30px;
+    }
+  }
 }
